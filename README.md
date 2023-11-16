@@ -5,9 +5,16 @@ You will have to find the following information and test them as you go along in
 ## Level 1
 
 - Which are the different primitive data types in TypeScript?
-
+There are three main types of very common primitive data: string, data, and booleans. Number corresponds to numbers. There is no int or float in typescript.
+exemple :
+let message: string = "Hello World";
+let nombre: number = 5;
+let VraiFaux: boolean = true;
+See the examples in the index.ts
 - How to type an Array?
+When we want to initiate an array, we use square brackets []. For example, we can use the number[] syntax for arrays of numbers and do the same for strings: string[]. See the examples in the index.ts
 - What is the `any` type?
+We can use `any`, to use any type of value and there will be no errors during type checking. See the examples in the index.ts
 - How to type the return of a function as well as the type of its parameters?
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
