@@ -29,3 +29,10 @@ function addition(a: number, b: number) {
 }
 
 // Level 2
+//  Exercice 1 :class
+class MyAge {
+    age: number;
+}
+const myAge = new MyAge
+myAge.age = 5;
+console.log(myAge.age);

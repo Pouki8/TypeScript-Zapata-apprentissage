@@ -24,6 +24,7 @@ See the examples in the index.ts
 ## Level 2
 
 - What is a class?
+In TypeScript, classes extend functionality by incorporating specific features such as type annotations, access modifiers, and the ability to define mandatory or optional parameters.
 - What is a class constructor?
 - What is a class instance?
 - How to check that a class is of a certain instance?
