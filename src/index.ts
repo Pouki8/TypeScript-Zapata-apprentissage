@@ -29,7 +29,7 @@ function addition(a: number, b: number) {
 }
 
 // Level 2
-//  Exercice 1 :class
+//  Exercice 1, 2, 3 : class, constructeur, instance
 class MyAge {
     age: number;
 }

@@ -11,13 +11,24 @@ let message: string = "Hello World";
 let nombre: number = 5;
 let VraiFaux: boolean = true;
 See the examples in the index.ts
+
 - How to type an Array?
-When we want to initiate an array, we use square brackets []. For example, we can use the number[] syntax for arrays of numbers and do the same for strings: string[]. See the examples in the index.ts
+When we want to initiate an array, we use square brackets []. For example, we can use the number[] syntax for arrays of numbers and do the same for strings: string[]. (and let fruits: Array<string> = ["ananas", "apple"]) See the examples in the index.ts
+
 - What is the `any` type?
 We can use `any`, to use any type of value and there will be no errors during type checking. See the examples in the index.ts
+let object: any = "Good Morning";
+console.log(object);
+let numberOne: number = object;
+object = 12;
+console.log(object);
+
 - How to type the return of a function as well as the type of its parameters?
 In a function, we need to return the type of the function with its parameters whether it is a number or a string.
 See the examples in the index.ts
+function addition(a: number, b: number) {
+    return a + b;
+}
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
@@ -26,6 +37,7 @@ See the examples in the index.ts
 - What is a class?
 In TypeScript, classes extend functionality by incorporating specific features such as type annotations, access modifiers, and the ability to define mandatory or optional parameters.
 - What is a class constructor?
+A constructor is a special function that exists inside a class, that is called only once when the object is created.
 - What is a class instance?
 - How to check that a class is of a certain instance?
 - What is `this` in a class?
