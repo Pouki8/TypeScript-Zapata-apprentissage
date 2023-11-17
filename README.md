@@ -73,13 +73,12 @@ To check if an instance belongs to a certain class in programming, you typically
 In object-oriented programming, the keyword this refers to the current instance of the class in which it is used. It is used to access the members of the current object being processed.
 
 ```ts
-public class Foo
-{
-    private String name;
+class SafelyBoundSafe {
+  contents: string;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  constructor(contents: string) {
+    this.contents = contents;
+  }
 }
 ```
 
