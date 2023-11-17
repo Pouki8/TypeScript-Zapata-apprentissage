@@ -39,3 +39,10 @@ class MyAge {
 const myAge = new MyAge
 myAge.age = 5;
 console.log(myAge.age);
+
+// level 3 : import export
+export class MyClass {
+}
+export function myFunction() {
+}
+export const myVariable = 42;

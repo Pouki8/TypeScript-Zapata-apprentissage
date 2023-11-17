@@ -70,12 +70,64 @@ In programming, "visibility of properties" refers to the accessibility of class 
 ## Level 3
 
 - How to split our program into different files? (e.g. a class in a file that I import into another)
+In TypeScript, you can split your program into different files and use the import and export statements to manage the dependencies between these files.
 - What is the `export` keyword?
+In TypeScript, the export keyword is used to indicate that a class, function, variable, or module is intended to be used in other TypeScript files. For exemple : 
+export class MyClass {
+}
 - What is the `import` keyword?
+In TypeScript, the import keyword is used to include functionalities (such as classes, functions, variables, modules, etc.) from other TypeScript files. It allows referencing exported elements (using the export keyword) in one file to use them in another. For exemple : 
+import { MyClass } from
+const myObject = new MyClass();
 - What's inheritance?
+Inheritance is an aspect of OOP languages, which allows a program to create a new class from an existing class. It is a mechanism that acquires the properties and behaviors of one class from another class.
+// Classe de base
+class Animal {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    makeSound() {
+        console.log("Un son générique");
+    }
+}
+
+// Sous-classe héritant d'Animal
+class Chien extends Animal {
+    // Des propriétés ou méthodes supplémentaires peuvent être ajoutées ici
+
+    // Remplacez la méthode makeSound
+    makeSound() {
+        console.log("Ouaf ! Ouaf !");
+    }
+}
+
+// Utilisation
+const monChien = new Chien("Buddy");
+console.log(monChien.name); // Accès à la propriété héritée
+monChien.makeSound(); // Appel de la méthode remplacée
 - How to call the constructor of a parent class?
+Use super() in the constructor of the child class to call the constructor of the parent class.
+class Chien extends Animal {
+    race: string;
+
+    constructor(name: string, race: string) {
+        super(name); // Appel du constructeur de la classe parente
+        this.race = race;
+    }
+
 - How to call a method of a parent class?
+Use super() in the constructor of the child class to call the constructor of the parent class. Also, use the super. methodInParentClass() syntax to invoke the methodInParentClass() in the method of the child class.
+class Chien extends Animal {
+    // Remplacez la méthode makeSound
+    makeSound() {
+        super.makeSound(); // Appelle la méthode makeSound de la classe parente
+        console.log("Ouaf ! Ouaf !");
+    }
 - What is polymorphism?
+Polymorphism is the ability to create a class that has more than one form. Or in other words, classes have the same methods but different implementations.
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
