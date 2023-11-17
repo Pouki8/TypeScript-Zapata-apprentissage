@@ -27,6 +27,9 @@ console.log(object);
 function addition(a: number, b: number) {
     return a + b;
 }
+function getTime(a: number, b: number): number {
+    return new Date().getTime();
+}
 
 // Level 2
 //  Exercice 1, 2, 3 : class, constructeur, instance

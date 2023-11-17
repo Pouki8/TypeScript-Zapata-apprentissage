@@ -5,7 +5,7 @@ You will have to find the following information and test them as you go along in
 ## Level 1
 
 - Which are the different primitive data types in TypeScript?
-There are three main types of very common primitive data: string, data, and booleans. Number corresponds to numbers. There is no int or float in typescript.
+There are three main types of very common primitive data: string, data, and booleans (Null and underfined). Number corresponds to numbers. There is no int or float in typescript.
 exemple :
 let message: string = "Hello World";
 let nombre: number = 5;
@@ -29,6 +29,9 @@ See the examples in the index.ts
 function addition(a: number, b: number) {
     return a + b;
 }
+function getTime(a: number, b: number): number {
+  return new Date().getTime();
+}
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
@@ -39,11 +42,28 @@ In TypeScript, classes extend functionality by incorporating specific features s
 - What is a class constructor?
 A constructor is a special function that exists inside a class, that is called only once when the object is created.
 - What is a class instance?
+A class is a blueprint which you use to create objects. An object is an instance of a class - it's a concrete 'thing' that you made using a specific class. So, 'object' and 'instance' are the same thing, but the word 'instance' indicates the relationship of an object to its class.
 - How to check that a class is of a certain instance?
+To check if an instance belongs to a certain class in programming, you typically use the instanceof operator (Java, JavaScript), isinstance function (Python), or is keyword (C#). These constructs conditionally execute code based on whether the object is an instance of a specific class.
 - What is `this` in a class?
+In object-oriented programming, the keyword this refers to the current instance of the class in which it is used. It is used to access the members of the current object being processed.
+public class Foo
+{
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
 - What is a class method?
+A class method is a method that can be invoked without reference to any object instance; these are called static methods in other languages. The term method usually refers to an instance method.
 - What is the visibility of properties?
+In programming, "visibility of properties" refers to the accessibility of class members. Common modifiers include "public" (accessible from anywhere), "private" (accessible only within the class), and "protected" (accessible to the class and its subclasses).
 - What is the difference between `public`, `private` and `protected`?
+"public" (accessible from anywhere)
+"private" (accessible only within the class)
+"protected" (accessible to the class and its subclasses)
+
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
