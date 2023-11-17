@@ -191,7 +191,8 @@ class Chien extends Animal {
         super.makeSound(); // Appelle la méthode makeSound de la classe parente
         console.log("Ouaf ! Ouaf !");
     }
-    ```
+
+```
 
 - What is polymorphism?
 
