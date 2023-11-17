@@ -5,48 +5,74 @@ You will have to find the following information and test them as you go along in
 ## Level 1
 
 - Which are the different primitive data types in TypeScript?
-There are three main types of very common primitive data: string, data, and booleans (Null and underfined). Number corresponds to numbers. There is no int or float in typescript.
+
+There are three main types of very common primitive data: `string`, `data`, and `booleans` (`Null` and `underfined`). `Number` corresponds to numbers. There is no int or float in typescript.
+
 exemple :
+
+```ts
 let message: string = "Hello World";
 let nombre: number = 5;
 let VraiFaux: boolean = true;
-See the examples in the index.ts
-
+```
 - How to type an Array?
-When we want to initiate an array, we use square brackets []. For example, we can use the number[] syntax for arrays of numbers and do the same for strings: string[]. (and let fruits: Array<string> = ["ananas", "apple"]) See the examples in the index.ts
+
+When we want to initiate an array, we use square brackets []. For example, we can use the `number[]` syntax for arrays of numbers and do the same for strings: `string[]`. *(and `let fruits: Array<string> = ["ananas", "apple"]`)* 
 
 - What is the `any` type?
-We can use `any`, to use any type of value and there will be no errors during type checking. See the examples in the index.ts
+
+We can use `any`, to use any type of value and there will be no errors during type checking.
+
+```ts
 let object: any = "Good Morning";
 console.log(object);
 let numberOne: number = object;
 object = 12;
 console.log(object);
+```
 
 - How to type the return of a function as well as the type of its parameters?
+
 In a function, we need to return the type of the function with its parameters whether it is a number or a string.
-See the examples in the index.ts
+
+```ts
 function addition(a: number, b: number) {
     return a + b;
 }
 function getTime(a: number, b: number): number {
   return new Date().getTime();
 }
+```
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
 ## Level 2
 
 - What is a class?
+
 In TypeScript, classes extend functionality by incorporating specific features such as type annotations, access modifiers, and the ability to define mandatory or optional parameters.
+
 - What is a class constructor?
-A constructor is a special function that exists inside a class, that is called only once when the object is created.
+
+A `constructor` is a special function that exists inside a class, that is called only once when the object is created.
+
 - What is a class instance?
-A class is a blueprint which you use to create objects. An object is an instance of a class - it's a concrete 'thing' that you made using a specific class. So, 'object' and 'instance' are the same thing, but the word 'instance' indicates the relationship of an object to its class.
+
+A class is a blueprint which you use to create objects. An object is an instance of a class.
+
+it's a concrete 'thing' that you made using a specific class. 
+
+So, 'object' and 'instance' are the same thing, but the word 'instance' indicates the relationship of an object to its class.
+
 - How to check that a class is of a certain instance?
+
 To check if an instance belongs to a certain class in programming, you typically use the instanceof operator (Java, JavaScript), isinstance function (Python), or is keyword (C#). These constructs conditionally execute code based on whether the object is an instance of a specific class.
+
 - What is `this` in a class?
+
 In object-oriented programming, the keyword this refers to the current instance of the class in which it is used. It is used to access the members of the current object being processed.
+
+```ts
 public class Foo
 {
     private String name;
@@ -55,14 +81,21 @@ public class Foo
         this.name = name;
     }
 }
+```
+
 - What is a class method?
+
 A class method is a method that can be invoked without reference to any object instance; these are called static methods in other languages. The term method usually refers to an instance method.
+
 - What is the visibility of properties?
-In programming, "visibility of properties" refers to the accessibility of class members. Common modifiers include "public" (accessible from anywhere), "private" (accessible only within the class), and "protected" (accessible to the class and its subclasses).
+
+In programming, "visibility of properties" refers to the accessibility of class members. Common modifiers include "`public`" (accessible from anywhere), "`private`" (accessible only within the class), and "`protected`" (accessible to the class and its subclasses).
+
 - What is the difference between `public`, `private` and `protected`?
-"public" (accessible from anywhere)
-"private" (accessible only within the class)
-"protected" (accessible to the class and its subclasses)
+
+"`public`" *(accessible from anywhere)*
+"`private`" *(accessible only within the class)*
+"`protected`" *(accessible to the class and its subclasses)*
 
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
@@ -70,17 +103,36 @@ In programming, "visibility of properties" refers to the accessibility of class 
 ## Level 3
 
 - How to split our program into different files? (e.g. a class in a file that I import into another)
+
 In TypeScript, you can split your program into different files and use the import and export statements to manage the dependencies between these files.
+
 - What is the `export` keyword?
-In TypeScript, the export keyword is used to indicate that a class, function, variable, or module is intended to be used in other TypeScript files. For exemple : 
+
+In TypeScript, the export keyword is used to indicate that a class, function, variable, or module is intended to be used in other TypeScript files. 
+
+For exemple : 
+
+```ts
 export class MyClass {
 }
+```
+
 - What is the `import` keyword?
-In TypeScript, the import keyword is used to include functionalities (such as classes, functions, variables, modules, etc.) from other TypeScript files. It allows referencing exported elements (using the export keyword) in one file to use them in another. For exemple : 
+
+In TypeScript, the import keyword is used to include functionalities (such as classes, functions, variables, modules, etc.) from other TypeScript files. It allows referencing exported elements (using the export keyword) in one file to use them in another. 
+
+For exemple : 
+
+```ts
 import { MyClass } from
 const myObject = new MyClass();
+```
+
 - What's inheritance?
+
 Inheritance is an aspect of OOP languages, which allows a program to create a new class from an existing class. It is a mechanism that acquires the properties and behaviors of one class from another class.
+
+```ts
 // Classe de base
 class Animal {
     name: string;
@@ -108,8 +160,13 @@ class Chien extends Animal {
 const monChien = new Chien("Buddy");
 console.log(monChien.name); // Accès à la propriété héritée
 monChien.makeSound(); // Appel de la méthode remplacée
+```
+
 - How to call the constructor of a parent class?
+
 Use super() in the constructor of the child class to call the constructor of the parent class.
+
+```ts
 class Chien extends Animal {
     race: string;
 
@@ -117,16 +174,23 @@ class Chien extends Animal {
         super(name); // Appel du constructeur de la classe parente
         this.race = race;
     }
+    ```
 
 - How to call a method of a parent class?
+
 Use super() in the constructor of the child class to call the constructor of the parent class. Also, use the super. methodInParentClass() syntax to invoke the methodInParentClass() in the method of the child class.
+
+```ts
 class Chien extends Animal {
     // Remplacez la méthode makeSound
     makeSound() {
         super.makeSound(); // Appelle la méthode makeSound de la classe parente
         console.log("Ouaf ! Ouaf !");
     }
+    ```
+
 - What is polymorphism?
+
 Polymorphism is the ability to create a class that has more than one form. Or in other words, classes have the same methods but different implementations.
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
