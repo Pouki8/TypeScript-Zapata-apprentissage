@@ -73,13 +73,18 @@ To check if an instance belongs to a certain class in programming, you typically
 In object-oriented programming, the keyword this refers to the current instance of the class in which it is used. It is used to access the members of the current object being processed.
 
 ```ts
-class SafelyBoundSafe {
-  contents: string;
+class Animal {
+    name: string;
 
-  constructor(contents: string) {
-    this.contents = contents;
-  }
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    makeSound() {
+        console.log("Un son générique");
+    }
 }
+
 ```
 
 - What is a class method?
