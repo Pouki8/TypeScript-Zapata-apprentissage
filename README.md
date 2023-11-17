@@ -16,6 +16,8 @@ When we want to initiate an array, we use square brackets []. For example, we ca
 - What is the `any` type?
 We can use `any`, to use any type of value and there will be no errors during type checking. See the examples in the index.ts
 - How to type the return of a function as well as the type of its parameters?
+In a function, we need to return the type of the function with its parameters whether it is a number or a string.
+See the examples in the index.ts
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 

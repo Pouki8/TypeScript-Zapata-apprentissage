@@ -1,6 +1,7 @@
 let message: string = 'Hello World !';
 console.log(message);
 
+// Level 1
 // Exercice 1 :
 let nombre: number = 5;
 let VraiFaux: boolean = true;
@@ -21,3 +22,10 @@ console.log(object);
 let numberOne: number = object;
 object = 12;
 console.log(object);
+
+// Exercice 4 :
+function addition(a: number, b: number) {
+    return a + b;
+}
+
+// Level 2
