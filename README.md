@@ -11,8 +11,8 @@ There are three main types of very common primitive data: `string`, `data`, and 
 exemple :
 
 ```ts
-let message: string = "Hello World";
-let nombre: number = 5;
+let name: string = "Joan";
+let power: number;= 5;
 let VraiFaux: boolean = true;
 ```
 - How to type an Array?
@@ -191,6 +191,7 @@ class Chien extends Animal {
         super.makeSound(); // Appelle la méthode makeSound de la classe parente
         console.log("Ouaf ! Ouaf !");
     }
+}
 
 ```
 
