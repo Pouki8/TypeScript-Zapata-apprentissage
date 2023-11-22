@@ -10,9 +10,9 @@ export class HeroAxe extends Hero {
 
     attack(opponent: Hero): void {
         if (opponent instanceof HeroSword) {
+            opponent.Life -= this.Power * 2;
+        } else {
             super.attack(opponent);
-            this.life *= 2;
         }
     }
-
 }
