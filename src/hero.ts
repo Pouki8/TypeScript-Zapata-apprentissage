@@ -27,13 +27,13 @@ export class Hero {
     get Life(): number {
         return this.life;
     }
-    set Name(name: string): void {
+    set Name(name: string) {
         this.name = name;
     }
-    set Power(power: number): void {
+    set Power(power: number) {
         this.power = power;
     }
-    set Life(life: number): void {
+    set Life(life: number) {
         this.life = life;
     }
     // Je crée la méthode attack()

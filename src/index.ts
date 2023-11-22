@@ -1,49 +1,38 @@
 let message: string = 'Hello World !';
 console.log(message);
 
-// Level 1
-// Exercice 1 :
-let nombre: number = 5;
-let VraiFaux: boolean = true;
 
-console.log(nombre);
-console.log(VraiFaux);
+//****************************************************** */
+//****************************************************** */
+//****************************************************** */
+// test Boss
+import { Hero } from "./hero";
+import { HeroAxe } from "./heroAxe";
+import { HeroSword } from "./heroSword";
+import { HeroSpear } from "./heroSpear";
 
-// Exercice 2 :
-const arrayString: string[] = ["Monday", "Tuesday"];
-console.log(arrayString);
+// test du projet avec 2 heros, de force et de vie différentes
+// mes 2 variables Joan et Leon
+const Joan = new Hero("Joan", 20, 50);
+const Leon = new Hero("Leon", 12, 150);
 
-const arrayNumber: number[] = [3, 5, 8, 2];
-console.log(arrayNumber);
+console.log(Joan.Name + " a " + Joan.Life + " et " + Leon.Name + " a " + Leon.Life);
+//Create a loop that makes two instances of subclasses Hero fight each other 
+//(they attack at the same time).
+// une boucle pour faire un combat jusqu'à ce que l'un perde
+while (Joan.isAlive() && Leon.isAlive()) {
+    Joan.attack(Leon);
+    Leon.attack(Joan);
 
-// Exercice 3 :
-let object: any = "Good Morning";
-console.log(object);
-let numberOne: number = object;
-object = 12;
-console.log(object);
-
-// Exercice 4 :
-function addition(a: number, b: number) {
-    return a + b;
-}
-function getTime(a: number, b: number): number {
-    return new Date().getTime();
+    console.log("Il reste " + Joan.Life + " a " + Joan.Name + " et " + Leon.Life + " a " + Leon.Name);
 }
 
-// Level 2
-//  Exercice 1, 2, 3 : class, constructeur, instance
-class MyAge {
-    age: number;
+//When at least one of them is dead, display {heroName} wins. If both are dead, display It's a draw.
+// Je vais faire une condition if pour le résultat du combat après la boucle :
+if (Joan.isAlive() && !Leon.isAlive()) {
+    console.log(Joan.Name + " wins !");
+} else if (!Joan.isAlive() && Leon.isAlive()) {
+    console.log(Leon.Name + " wins !");
+} else {
+    console.log("It's a draw.");
 }
-const myAge = new MyAge
-myAge.age = 5;
-console.log(myAge.age);
-
-// level 3 : import export
-export class MyClass {
-}
-export function myFunction() {
-}
-export const myVariable = 42;
-
