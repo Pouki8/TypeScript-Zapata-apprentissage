@@ -7,14 +7,15 @@ console.log(message);
 //****************************************************** */
 // test Boss
 import { Hero } from "./hero";
+import { Weapon } from "./weapon"
 import { HeroAxe } from "./heroAxe";
 import { HeroSword } from "./heroSword";
 import { HeroSpear } from "./heroSpear";
 
 // test du projet avec 2 heros, de force et de vie différentes
 // mes 2 variables Joan et Leon
-const Joan = new Hero("Joan", 20, 50);
-const Leon = new Hero("Leon", 12, 150);
+const Joan = new Hero("Joan", 20, 200, new Weapon("", 20));
+const Leon = new Hero("Leon", 12, 150, new Weapon("", 30));
 
 console.log(Joan.Name + " a " + Joan.Life + " et " + Leon.Name + " a " + Leon.Life);
 //Create a loop that makes two instances of subclasses Hero fight each other 

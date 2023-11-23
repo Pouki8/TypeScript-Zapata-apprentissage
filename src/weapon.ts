@@ -4,9 +4,12 @@ export class Weapon {
 
     // avec les propriétés suivante 
     public name: string;
+    public damage: number;
+    static damage: number;
     // J'ai fait un constructeur avec mes propriétés 
-    constructor(name: string) {
+    constructor(name: string, damage: number) {
         this.name = name;
+        this.damage = damage;
     }
 }
 

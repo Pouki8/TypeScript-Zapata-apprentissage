@@ -5,9 +5,9 @@ import { HeroAxe } from "./heroAxe"
 export class HeroSpear extends Hero {
 
 
-    constructor(name: string, power: number, life: number) {
-        super(name, power, life);
-        this.weapon = new Weapon("Spear");
+    constructor(name: string, power: number, life: number, weapon: Weapon) {
+        super(name, power, life, weapon);
+        this.weapon = new Weapon("Spear", 10);
     }
 
 

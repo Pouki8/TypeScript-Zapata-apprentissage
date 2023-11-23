@@ -7,14 +7,15 @@ export class Hero {
     private name: string;
     private power: number;
     private life: number;
-    protected weapon: Weapon;
+    weapon!: Weapon;
 
 
     // J'ai fait un constructeur avec mes propriétés 
-    constructor(name: string, power: number, life: number) {
+    constructor(name: string, power: number, life: number, weapon: Weapon) {
         this.name = name;
         this.power = power;
         this.life = life;
+        this.weapon = weapon;
     }
 
     // création de méthode pour les paramètres privé
@@ -41,7 +42,7 @@ export class Hero {
     //La méthode `attack` a un paramètre `opponent` (de type `Hero`). 
     attack(opponent: Hero): void {
         // si la vie diminue d'autant de dégât de la puissance de l'attaque
-        opponent.life -= this.power;
+        opponent.life -= this.power + this.weapon.damage;
     }
 
     //La méthode isAlive devrait revenir true si les points de vie du héros sont supérieurs 
